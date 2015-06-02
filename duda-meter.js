@@ -1,17 +1,31 @@
+Counter = new Mongo.Collection('counter');
+
 if (Meteor.isClient) {
-  // counter starts at 0
-  Session.setDefault('counter', 0);
 
   Template.hello.helpers({
     counter: function () {
-      return Session.get('counter');
+      return Counter.findOne().value || 0;
     }
   });
 
   Template.hello.events({
-    'click button': function () {
-      // increment the counter when button is clicked
-      Session.set('counter', Session.get('counter') + 1);
+    'click #counterUp': function () {
+
+      counter = Counter.findOne();
+
+      Counter.update(
+        {_id: counter._id},
+        {$inc: { value: 1 }}
+      );
+    },
+    'click #counterReset': function () {
+
+      counter = Counter.findOne();
+
+      Counter.update(
+        {_id: counter._id},
+        {$set: { value: 0 }}
+      );
     }
   });
 }
