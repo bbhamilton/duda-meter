@@ -1,7 +1,7 @@
 <template name="promisesList">
-  <div>
+  <div id="promises">
     {{#each promises}}
-    <div class="media">
+    <div class="promise media {{progress}}">
       <div class="media-left">
         <button class="media-object vote-button">{{votes}}</button>
       </div>

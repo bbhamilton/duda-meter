@@ -5,3 +5,15 @@
   border: 0;
   font-size: 2em;
 }
+
+#promises .fullfilled {
+  border: 1px solid green;
+}
+
+#promises .notfullfilled {
+  border: 1px solid red;
+}
+
+#promises .inprogress {
+  border: 1px solid orange;
+}

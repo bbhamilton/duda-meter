@@ -3,12 +3,12 @@
     <h1>Dudo-meter</h1>
     <p>This is a dudo-meter. It helps you follow after Andrzej Duda's promises.</p>
   </header>
-  <div class="well">
+  <nav class="well">
     <ul class="nav nav-pills">
-      <li role="presentation" class="active"><a href="#">Wszystkie <span class="badge">{{allPromises}}</span></a></li>
-      <li role="presentation"><a href="#">Spełnione <span class="badge">20</span></a></li>
-      <li role="presentation"><a href="#">Niespełnione <span class="badge">10</span></a></li>
-      <li role="presentation"><a href="#">W toku <span class="badge">9</span></a></li>
+      <li role="presentation" class="all active"><a href="#">Wszystkie <span class="badge">{{allPromises}}</span></a></li>
+      <li role="presentation" class="fullfilled"><a href="#">Spełnione <span class="badge">{{fullfilledPromises}}</span></a></li>
+      <li role="presentation" class="notfullfilled"><a href="#">Niespełnione <span class="badge">{{notFullfilledPromises}}</span></a></li>
+      <li role="presentation" class="inprogress"><a href="#">W toku <span class="badge">{{inProgressPromisses}}</span></a></li>
     </ul>
-  </div>
+  </nav>
 </template>
