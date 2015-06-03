@@ -17,3 +17,7 @@
 #promises .inprogress {
   border: 1px solid orange;
 }
+
+footer {
+  margin-top: 20px;
+}

@@ -1,0 +1,12 @@
+<template name="promiseElement">
+  <div class="promise media {{progress}}">
+    <div class="media-left">
+      <button class="media-object vote-button">{{votes}}</button>
+    </div>
+    <div class="media-body">
+      <h4 class="media-heading">{{title}}</h4>
+      {{content}}
+      <a href="{{pathFor 'promiseDetails'}}" class="btn btn-default pull-right">czytaj więcej...</a>
+    </div>
+  </div>
+</template>

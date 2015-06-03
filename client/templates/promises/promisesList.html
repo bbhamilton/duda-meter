@@ -1,15 +1,15 @@
 <template name="promisesList">
+  <nav class="well">
+    <ul class="nav nav-pills">
+      <li role="presentation" class="all active"><a href="#">Wszystkie <span class="badge">{{allPromises}}</span></a></li>
+      <li role="presentation" class="fullfilled"><a href="#">Spełnione <span class="badge">{{fullfilledPromises}}</span></a></li>
+      <li role="presentation" class="notfullfilled"><a href="#">Niespełnione <span class="badge">{{notFullfilledPromises}}</span></a></li>
+      <li role="presentation" class="inprogress"><a href="#">W toku <span class="badge">{{inProgressPromisses}}</span></a></li>
+    </ul>
+  </nav>
   <div id="promises">
     {{#each promises}}
-    <div class="promise media {{progress}}">
-      <div class="media-left">
-        <button class="media-object vote-button">{{votes}}</button>
-      </div>
-      <div class="media-body">
-        <h4 class="media-heading">{{title}}</h4>
-        {{content}}
-      </div>
-    </div>
+      {{> promiseElement }}
     {{/each}}
   </div>
 </template>
